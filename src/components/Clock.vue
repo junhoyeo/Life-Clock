@@ -97,11 +97,6 @@ export default {
         font-family: 'Londrina Sketch', cursive;
         font-size: 3.5em;
         font-weight: bold;
-
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
         user-select: none;
         
         box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
