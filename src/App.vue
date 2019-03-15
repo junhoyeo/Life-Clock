@@ -1,4 +1,5 @@
 <script>
+import moment from 'moment'
 import Clock from '@/components/Clock'
 import Grave from '@/components/Grave'
 
@@ -37,6 +38,10 @@ export default {
     getDiff: function (base) {
       let diff = base - new Date(this.birth)
       return Math.abs(new Date(diff).getUTCFullYear() - 1970);
+    },
+
+    getTime: function () {
+      return moment().set('hours', (this.age / this.life) * 24)
     },
 
     updateAge: function () {
@@ -89,7 +94,7 @@ export default {
     </div>
     <div id="clock" v-else>
       <h1>당신의 삶에는 아직 해도 뜨지 않았어요</h1>
-      <Clock :time="time" />
+      <Clock :time="getTime()" />
     </div>
   </div>
 </template>
